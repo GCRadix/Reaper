@@ -1,6 +1,6 @@
 # Reaper Scripts and Tools
 This is a collection of reaper scrpits and automations by GCRadix. <br/>
-If you'd like to request other tools or adjustments to the current ones, please contact Lukas Keil on slack or via lkeil@gcradix.com.
+If you'd like to request other tools or adjustments to the current ones, please reach out to your GCRadix contact on slack or via contact@gcradix.com.
 
 # Script Reference
 
