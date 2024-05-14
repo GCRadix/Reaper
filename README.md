@@ -1,17 +1,34 @@
 # Reaper Scripts and Tools
-This is a collection of reaper scrpits and automations by GCRadix. <br/>
-If you'd like to request other tools or adjustments to the current ones, please contact Lukas Keil on slack or via lkeil@gcradix.com.
+This is a collection of reaper scripts and automations by GCRadix. <br/>
+If you'd like to request other tools or adjustments to the current ones, please reach out to your GCRadix contact on slack or via contact@gcradix.com.
 
 # Script Reference
+
+## GCR_AutoSaveProject
+<TBA>
 
 ## GCR_BatchCreateRegionsForClips
 Creates a Region for every clip on the timeline with the name of the clip without file extensions.
 
-## GCR_SelectionCreateRegionsForClips
-Creates a Region for selected clips on the timeline with the name of the clip without file extensions.
+## GCR_BatchPrefixSelectedRegionName
+
+## GCR_CreateRegionPerItemGroup
+<TBA>
 
 ## GCR_GluePreserveNaming
 Glues together a selection of clips uses the first item's name for the resulting clip.
+
+## GCR_RandomPitchOffset
+<TBA>
+
+## GCR_RandomRateOffset
+<TBA>
+
+## GCR_RandomVolumeOffset
+<TBA>
+
+## GCR_SelectionCreateRegionsForClips
+Creates a Region for selected clips on the timeline with the name of the clip without file extensions.
 
 # Installation
 
