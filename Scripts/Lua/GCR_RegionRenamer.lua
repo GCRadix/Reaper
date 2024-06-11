@@ -131,7 +131,7 @@ function PerformRename(prefix, suffix, casing, num_settings, replace_settings)
 end
 
 function OpenUI()
-  local selector = rtk.Window{w=300, h=600, title="Region Selector"}
+  local selector = rtk.Window{w=300, h=600, title="Region Renamer"}
 
   local box_main = rtk.VBox{fillw=true, margin=20, w=1.0}
   local entry_prefix = rtk.Entry{placeholder='Add prefix', textwidth=15, bmargin=20, w=1.0}
