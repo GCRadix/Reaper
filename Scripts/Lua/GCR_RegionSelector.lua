@@ -104,10 +104,6 @@ function PerformSelection(select_nested, search_query, before_time, after_time)
   end 
 end
 
-function LogValue(value)
-  reaper.MB(value, "", 0)
-end
-
 function OpenUI()
   local selector = rtk.Window{w=300, h=300, title="Region Selector"}
 
