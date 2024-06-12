@@ -131,39 +131,39 @@ function PerformRename(prefix, suffix, casing, num_settings, replace_settings)
 end
 
 function OpenUI()
-  local selector = rtk.Window{w=300, h=600, title="Region Renamer"}
+  local selector = rtk.Window{w=300, h=500, title="Region Renamer"}
 
   local box_main = rtk.VBox{fillw=true, margin=20, w=1.0}
-  local entry_prefix = rtk.Entry{placeholder='Add prefix', textwidth=15, bmargin=20, w=1.0}
-  local entry_suffix = rtk.Entry{placeholder='Add suffix', textwidth=15, bmargin=20, w=1.0}
+  local entry_prefix = rtk.Entry{placeholder='Add prefix', textwidth=15, bmargin=10, w=1.0}
+  local entry_suffix = rtk.Entry{placeholder='Add suffix', textwidth=15, bmargin=10, w=1.0}
 
-  local text_casing = rtk.Text{'Casing', bmargin=20, halign='center'}
+  local text_casing = rtk.Text{'Casing', tmargin=10, bmargin=10, halign='center'}
   local menu_casing = rtk.OptionMenu{
     menu={
         {"Unchanged", id='unchanged'},
         {'Title case', id='title'},
         {'Uppercase', id='upper'},
         {'Lowercase', id='lower'},
-    }, bmargin=20, w=1.0, selected="unchanged"
+    }, bmargin=10, w=1.0, selected="unchanged"
   }
 
-  local text_numeration = rtk.Text{'Numeration', bmargin=20, halign='center'}
+  local text_numeration = rtk.Text{'Numeration', tmargin=10, bmargin=10, halign='center'}
   local menu_numeration_mode = rtk.OptionMenu{
     menu={
         {"None", id='none'},
         {'Numbers', id='numbers'},
         {'Letters (uppercase)', id='upper'},
         {'Letters (lowercase)', id='lower'},
-    }, bmargin=20, w=1.0, selected="none"
+    }, bmargin=10, w=1.0, selected="none"
   }
-  local entry_numeration_separator = rtk.Entry{placeholder='Numeration seperator (e.g. "_")', textwidth=15, bmargin=20, w=1.0}
-  local entry_numeration_charnum = rtk.Entry{placeholder='Numeration length (1-10)', textwidth=15, bmargin=20, w=1.0}
+  local entry_numeration_separator = rtk.Entry{placeholder='Numeration seperator (e.g. "_")', textwidth=15, bmargin=10, w=1.0}
+  local entry_numeration_charnum = rtk.Entry{placeholder='Numeration length (1-10)', textwidth=15, bmargin=10, w=1.0}
 
-  local text_replace = rtk.Text{'Replace', bmargin=20, halign='center'}
-  local entry_replace_from = rtk.Entry{placeholder='From', textwidth=15, bmargin=20, w=1.0}
-  local entry_replace_to = rtk.Entry{placeholder='To', textwidth=15, bmargin=20, w=1.0}
+  local text_replace = rtk.Text{'Replace', tmargin=10, bmargin=10, halign='center'}
+  local entry_replace_from = rtk.Entry{placeholder='From', textwidth=15, bmargin=10, w=1.0}
+  local entry_replace_to = rtk.Entry{placeholder='To', textwidth=15, bmargin=10, w=1.0}
 
-  local box_buttons = rtk.HBox()
+  local box_buttons = rtk.HBox{tmargin=10}
   local btn_submit = rtk.Button{label='Run', rmargin=10, color="green", w=80}
   btn_submit.onclick = function()
     local charnum = tonumber(entry_numeration_charnum.value)
@@ -207,7 +207,7 @@ function OpenUI()
         local numeration_settings = {mode=menu_numeration_mode.selected_id, separator=entry_numeration_separator.value, charnum=charnum}
 
         local replace_settings = {from=entry_replace_from.value, to=entry_replace_to.value}
-        PPerformRename(entry_prefix.value, entry_suffix.value, menu_casing.selected_id, numeration_settings, replace_settings)
+        PerformRename(entry_prefix.value, entry_suffix.value, menu_casing.selected_id, numeration_settings, replace_settings)
         selector:close()
     end
   end
